@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avrix - Creative Digital Studio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #111827 0%, #1F2937 100%);
+            min-height: 100vh;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .award-badge {
+    position: absolute;
+    top: 25rem; /* Moved lower from 15rem/5rem */
+    right: 5rem;
+    width: 12rem; /* Increased from 8rem/6rem */
+    height: 12rem; /* Increased from 8rem/6rem */
+    background: #3B82F6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5rem; 
+    line-height: 1.4;
+    animation: rotate 10s linear infinite;
+}
+
+@media (max-width: 768px) {
+    .award-badge {
+        width: 18rem; 
+        height: 18rem; 
+        font-size: 2.5rem; 
+        top: 20rem; 
+        right: 2rem;
+    }
+}
+
+        nav {
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            flex: 1;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            justify-content: center;
+            flex: 2;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-item > a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .nav-item > a::after {
+            content: '▼';
+            font-size: 0.7em;
+            margin-top: 2px;
+        }
+
+        .nav-item:hover .dropdown {
+            display: block;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #1F2937;
+            border-radius: 0.5rem;
+            padding: 0.5rem;
+            min-width: 200px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .dropdown a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            display: block;
+            transition: background 0.3s;
+        }
+
+        .dropdown a:hover {
+            background: #374151;
+            border-radius: 0.25rem;
+        }
+
+        .right-section {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .overflow-btn {
+            background: #1F2937;
+            color: white;
+            border: none;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-size: 1.2rem;
+        }
+
+        .overflow-btn:hover {
+            background: #374151;
+        }
+
+        .menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        main {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            padding-left: 4rem;
+        }
+
+        .subtitle {
+            color: #3B82F6;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.875rem;
+        }
+
+        .title {
+            margin-top: 1rem;
+            font-size: 5.5rem;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+
+        .outline-text {
+            color: transparent;
+            -webkit-text-stroke: 3px white;
+            font-weight: 900;
+            letter-spacing: 0.1em;
+            font-size: 6rem;
+            text-shadow: none;
+        }
+
+        .award-badge {
+            position: absolute;
+            top: 5rem;
+            right: 5rem;
+            width: 6rem;
+            height: 6rem;
+            background: #3B82F6;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 0.75rem;
+            line-height: 1.4;
+            animation: rotate 10s linear infinite;
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 4rem;
+            }
+            
+            .outline-text {
+                font-size: 4.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wave-bg"></div>
+    
+    <nav>
+        <div class="logo">AVRIX</div>
+        <div class="nav-links">
+            <div class="nav-item">
+                <a href="#">Home</a>
+                <div class="dropdown">
+                    <a href="#">Homepage 1</a>
+                    <a href="#">Homepage 2</a>
+                    <a href="#">Homepage 3</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a href="#">Pages</a>
+                <div class="dropdown">
+                    <a href="#">About Us</a>
+                    <a href="#">Our Team</a>
+                    <a href="#">Portfolio</a>
+                    <a href="#">Pricing</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a href="#">Services</a>
+                <div class="dropdown">
+                    <a href="#">Web Design</a>
+                    <a href="#">Development</a>
+                    <a href="#">Branding</a>
+                    <a href="#">Marketing</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a href="#">Blog</a>
+                <div class="dropdown">
+                    <a href="#">Latest News</a>
+                    <a href="#">Tutorials</a>
+                    <a href="#">Case Studies</a>
+                    <a href="#">Resources</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a href="#">Contact</a>
+                <div class="dropdown">
+                    <a href="#">Get in Touch</a>
+                    <a href="#">Support</a>
+                    <a href="#">Sales</a>
+                </div>
+            </div>
+        </div>
+        <div class="right-section">
+            <button class="overflow-btn">☰</button>
+        </div>
+        <button class="menu-btn">☰</button>
+    </nav>
+
+    <main>
+        <span class="subtitle">Creative digital studio</span>
+        <h1 class="title">
+            BUILD GREAT<br>
+            <span class="outline-text">PORTFOLIO</span>
+        </h1>
+        <div class="award-badge">
+            AWARD<br>
+            WINNING<br>
+            DESIGN
+        </div>
+    </main>
+</body>
+</html>
